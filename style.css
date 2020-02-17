@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700);
+  * {
+      box-sizing: border-box;
+      }
+      
+      .row 
+      	  {
+      	  content: "";
+      	  display: table;
+      	  clear: both;
+      	  }
+      	  .column_left{
+      	  	float: left;
+      	  	width: 50%;
+      	  	padding: 20px;
+      	  }
+      	  .column_right{
+      	  	float: right;
+      	  	width: 50%;
+      	  	padding: 20px;
+      	  }
+      	  .column_left2{
+      	  	float: left;
+      	  	width: 70%;
+      	  	padding: 20px;
+      	  }
+      	  .column_right2{
+      	  	float: right;
+      	  	width: 30%;
+      	  	padding: 20px;
+      	  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 233, 117);
+	font-family: ubuntu;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: rgb(114, 243, 247);
+}
+
+header img {
+  width: 50px;
+  background: white;
+  border-radius: 5px;
+  margin: 0 20px 0 40px;
+}
+
+article{
+  background: white;
+  border: 3px solid #a0a0a0;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: ubuntu;
+}
+
+hr, article .date {
+  color: #a0a0a0;
+}
