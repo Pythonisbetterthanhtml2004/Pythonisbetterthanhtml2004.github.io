@@ -29,7 +29,7 @@ body {
 
 header {
   display: flex;
-  align-items: center;
+  align-text: center;
   background: rgb(114, 243, 247);
 }
 
