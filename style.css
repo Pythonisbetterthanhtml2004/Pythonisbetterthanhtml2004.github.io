@@ -54,7 +54,7 @@ hr, article .date {
   color: #a0a0a0;
 }
 .vertical-menu {
-  width: 200px;
+  width: 200px auto;
 }
 
 .vertical-menu a {
@@ -73,3 +73,66 @@ hr, article .date {
   background-color: #4CAF50;
   color: white;
 }
+header {
+  display: flex;
+  align-items: center;
+  background: rgb(255, 226, 129);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(145, 255, 255);
+  font-family: ubuntu;
+}
+.vertical-menu {
+  width: 200px;
+  height: 130%;
+  background-color: green;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: blue;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.menu_left{
+      	  	float: left;
+      	  	width: 10%;
+      	  	height: 1000px;
+      	  	padding: 20px;
+      	  }
+.menu_right{
+      	  	float: right;
+      	  	width: 80%;
+      	  	padding: 20px;
+      	  }
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
