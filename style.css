@@ -144,3 +144,8 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #777;
 }
+table
+{
+font-weight: normal;
+font-size:19px;
+}
