@@ -2,8 +2,8 @@
   * {
       box-sizing: border-box;
       }
-      
-      .row 
+
+      .row
       	  {
       	  content: "";
       	  display: table;
@@ -17,6 +17,16 @@
       	  .column_right{
       	  	float: right;
       	  	width: 50%;
+      	  	padding: 20px;
+      	  }
+          .table_contents{
+      	  	float: left;
+      	  	width: 30%;
+      	  	padding: 20px;
+      	  }
+          .main_page{
+      	  	float: right;
+      	  	width: 70%;
       	  	padding: 20px;
       	  }
 
@@ -135,4 +145,6 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #777;
 }
-
+th, td {
+  padding: 15px;
+}
