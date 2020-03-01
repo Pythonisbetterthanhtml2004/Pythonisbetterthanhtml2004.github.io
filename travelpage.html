@@ -2,10 +2,29 @@
 <html>
 <head>
 	<title>Travel Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-	<meta  charset="utf-8"
+	<link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta  charset="utf-8">
+	<script>
+	function startTime() {
+	  var today = new Date();
+	  var h = today.getHours();
+	  var m = today.getMinutes();
+	  var s = today.getSeconds();
+	  m = checkTime(m);
+	  s = checkTime(s);
+	  document.getElementById('txt').innerHTML =
+	  h + ":" + m + ":" + s;
+	  var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+	  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+	  return i;
+	}
+	</script>
 </head>
-<body>
+<body onload="startTime()">
 <header>
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Travel Page</h1>
@@ -17,7 +36,9 @@
   <a href="blogpage.html">Blog</a>
   ...
 </div>
-    <h2 align="middle"><strong>Fort Myers</strong></h2>
+    <h2>Clock</h2>
+		<div id="txt"></div>
+		<h2 align="middle"><strong>Fort Myers</strong></h2>
 	<p align="middle">
     <img src="https://i.ytimg.com/vi/m5QY65tYMBo/maxresdefault.jpg" alt="See the source image"/>
 		<br> A view of <strong>Fort Myers beach</strong>

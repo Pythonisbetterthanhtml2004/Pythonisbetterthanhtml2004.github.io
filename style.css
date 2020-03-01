@@ -117,3 +117,8 @@ table
 font-weight: normal;
 font-size:19px;
 }
+.post{
+            font-family: "Georgia", "Palatino", serif;
+            line-height: 1.8;
+            text-indent: 50px;
+        }

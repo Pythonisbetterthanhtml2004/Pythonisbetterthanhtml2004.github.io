@@ -2,10 +2,29 @@
 <html>
   <head>
     <title> Homepage! </title>
+    <link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
   </head>
-  <body>
+  <body onload="startTime()">
   <header>
 </div>
    <img src="Images/rss-icon.png" width="50px" />
@@ -19,6 +38,8 @@
   ...
 </div>
 </div>
+     <h2 align="middle"><strong><em>Clock</em></strong></h2>
+     <div align="middle" id="txt"></div>
      <h2 align="middle"><strong><em>A little about me</em></strong></h2>
     <p align="middle">
     Hello my name is Landon Harness and I take computer science at Plymouth High school. I

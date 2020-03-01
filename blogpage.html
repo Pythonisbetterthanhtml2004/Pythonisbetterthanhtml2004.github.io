@@ -3,10 +3,29 @@
 <head>
 <meta charset="utf-8">
 <title>Blog page</title>
+<link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
 </head>
-<body>
-<header>
+<body onload="startTime()">
+<header id="Blog">
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Blog<h1>
 </header>
@@ -19,6 +38,8 @@
 </div>
   <div class="row">
     <div class="table_contents">
+      <h2>Clock</h2>
+      <div id="txt"></div>
       <h2>Table of contents</h2>
       <div class="vertical-menu">
         <a href="#Created_this_blog!">02-29-2020</a>
@@ -30,15 +51,29 @@
   <article>
         <h3 id="Created_this_blog!">Created this blog!</h3>
         <hr />
-        <p>The ap final practice started today! So far it is going so good! Now I am exicted to create a really awesome program!
-        Program is linked here: <a href="https://repl.it/@LandonHarness/GuessWho">Code</a> </p>
+        <p class="post">
+          Hello world! Today I created this blog, even though there is one post
+          before this. Overall, creating a blog page isn't that hard. I thought
+          I would put the post inside a bubble to make it more visually appealing.
+          Also, I met every requirement by putting two posts on the page, editing
+          some css, creating a table of contents, and internally linking the parts of
+          the table of contents. Updates for the blog will come weekly, and maybe
+          this page layout will change over time.
+        </p>
         <p class="date">02-29-2020</p>
+        <a href="#Blog">Top</a>
       </article>
   <article>
        <h3 id="Finished_AP_explore_task">Finished AP Explore task</h3>
        <hr />
-       <p>Today for lunch I had hawaiian pizza, which is the best kind of pizza.  Pineapples are great on anything.  Then I made some sweet games on Repl.it.  What does the future hold for me?  Guess we'll find out!</p>
+       <p class="post">Hello World! Today I finshed my AP expore task. I took me so long to
+       finish it because I am a big procrastinator. With that, I just started
+       the explore task the monday before this post. Overall, I would not recommend
+       doing that because it is very stressful and creating it takes a long
+       portion of your time. Also, I would not recommend doing that because
+       you also also might not do good on it. </p>
        <p class="date">02-28-2020</p>
+       <a href="#Blog">Top</a>
      </article>
 
      © 2020 Harness, Inc.

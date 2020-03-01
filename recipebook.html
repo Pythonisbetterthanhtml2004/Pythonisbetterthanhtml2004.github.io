@@ -3,9 +3,28 @@
 <head>
 <meta charset="utf-8">
 <title>Recipe Book</title>
+<link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
 </head>
-<body>
+<body onload="startTime()">
 <header>
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Recipe Book<h1>
@@ -19,6 +38,8 @@
 </div>
 <div class="row">
   <div class="table_contents">
+    <h2>Clock</h2>
+    <div id="txt"></div>
     <h2>Table of Contents</h2>
       <ul>
         <li><a href="#slow"> Slow-Roasted Pork Shoulder</a></li>
