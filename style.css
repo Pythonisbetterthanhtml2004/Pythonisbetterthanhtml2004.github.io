@@ -108,7 +108,7 @@ body {
 }
 
 .vertical-menu a:hover {
-  background-color: blue;
+  background-color: #777;
 }
 
 .vertical-menu a.active {
