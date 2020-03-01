@@ -29,7 +29,10 @@
       	  	width: 70%;
       	  	padding: 20px;
       	  }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 83e8d63723b2dda7ec0d8a998521e5808625e4a4
 body {
   margin: 0;
   padding: 0;
@@ -145,6 +148,13 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #777;
 }
+<<<<<<< HEAD
 th, td {
   padding: 15px;
+=======
+table
+{
+font-weight: normal;
+font-size:19px;
+>>>>>>> 83e8d63723b2dda7ec0d8a998521e5808625e4a4
 }
