@@ -82,39 +82,7 @@ hr, article .date {
   background-color: #4CAF50;
   color: white;
 }
-header {
-  display: flex;
-  align-items: center;
-  background: rgb(255, 226, 129);
-}
-body {
-  margin: 0;
-  padding: 0;
-  background: rgb(145, 255, 255);
-  font-family: ubuntu;
-}
-.vertical-menu {
-  width: 200px;
-  height: 130%;
-  background-color: green;
-}
 
-.vertical-menu a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.vertical-menu a:hover {
-  background-color: #777;
-}
-
-.vertical-menu a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 .menu_left{
       	  	float: left;
       	  	width: 10%;
