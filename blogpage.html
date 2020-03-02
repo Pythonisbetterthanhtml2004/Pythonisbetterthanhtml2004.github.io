@@ -1,34 +1,41 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!--Sets the characters to the english code-->
 <meta charset="utf-8">
 <title>Blog page</title>
+<!--Adds image next to title of page-->
 <link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Links the css sheet-->
 <link href="style.css" rel="stylesheet" type="text/css" />
+<!--The tag for java script-->
 <script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
+function startTime() { //named function startTime(). Also start of function.
+  var today = new Date(); //Finds out day it is
+  var h = today.getHours(); //Gets what hour we are in
+  var m = today.getMinutes();//Gets what minute we are in, in the hour
+  var s = today.getSeconds();//Gets what second we in, in the minute
+  m = checkTime(m); //Refreshes the minute
+  s = checkTime(s); // Refreshes the second
+  document.getElementById('txt').innerHTML = //name to onboard to html
+  h + ":" + m + ":" + s; //Puts in the order hour, minute, second
+  var t = setTimeout(startTime, 500);//Displays new time every 500 milliseconds
+}//End of function
+function checkTime(i) { //name function checkTime
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+  return i;//Keeps repeating this function until number is 10 or bigger
+}//End of this function
 </script>
 </head>
+<!--Loads script from top into html code-->
 <body onload="startTime()">
+<!--Header at top of the page-->
 <header id="Blog">
+<!--Puts image in header-->
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Blog<h1>
 </header>
+<!--The scroll menu at top of page-->
 <div class="scrollmenu">
   <a href="index.html">Home</a>
   <a href="travelpage.html">Travel Page</a>
@@ -37,19 +44,27 @@ function checkTime(i) {
   ...
 </div>
   <div class="row">
+    <!--Creates a Colum on the page for table of contents and the clock-->
     <div class="table_contents">
       <h2>Clock</h2>
+      <!--Adds the clock into the page-->
       <div id="txt"></div>
       <h2>Table of contents</h2>
+      <!--Div class for table of contents on the side of the page to seperate
+      from the main part of the page -->
       <div class="vertical-menu">
         <a href="#Created_this_blog!">02-29-2020</a>
         <a href="#Finished_AP_explore_task">02-28-2020</a>
 </div>
 </div>
+    <!--The colum of the main page to seperate from the table of table_contents
+    and clock-->
     <div class="main_page">
       <h1 align="middle">Welcome to my first blog!!!</h1>
+  <!--Creates box around blog post-->
   <article>
         <h3 id="Created_this_blog!">Created this blog!</h3>
+        <!--Creates line under title of post-->
         <hr />
         <p class="post">
           Hello world! Today I created this blog, even though there is one post
@@ -60,21 +75,25 @@ function checkTime(i) {
           the table of contents. Updates for the blog will come weekly, and maybe
           this page layout will change over time.
         </p>
+        <!--The date class give the paragraph with the date in it cetain properties-->
         <p class="date">02-29-2020</p>
         <a href="#Blog">Top</a>
       </article>
-  <article>
-       <h3 id="Finished_AP_explore_task">Finished AP Explore task</h3>
-       <hr />
-       <p class="post">Hello World! Today I finshed my AP expore task. I took me so long to
-       finish it because I am a big procrastinator. With that, I just started
-       the explore task the monday before this post. Overall, I would not recommend
-       doing that because it is very stressful and creating it takes a long
-       portion of your time. Also, I would not recommend doing that because
-       you also also might not do good on it. </p>
-       <p class="date">02-28-2020</p>
-       <a href="#Blog">Top</a>
-     </article>
+      <!--Creates box around blog post-->
+      <article>
+        <h3 id="Finished_AP_explore_task">Finished AP Explore task</h3>
+        <!--Creates line under title of post-->
+        <hr />
+          <p class="post">Hello World! Today I finshed my AP expore task. I took me so long to
+            finish it because I am a big procrastinator. With that, I just started
+            the explore task the monday before this post. Overall, I would not recommend
+            doing that because it is very stressful and creating it takes a long
+            portion of your time. Also, I would not recommend doing that because
+            you also also might not do good on it. </p>
+            <!--The date class give the paragraph with the date in it cetain properties-->
+            <p class="date">02-28-2020</p>
+            <a href="#Blog">Top</a>
+      </article>
 
      © 2020 Harness, Inc.
 </div>
