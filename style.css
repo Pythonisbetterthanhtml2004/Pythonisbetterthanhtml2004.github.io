@@ -1,107 +1,158 @@
+/* Imports the ubuntu font */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700);
   * {
+    /* Sets box sizing to border box */
       box-sizing: border-box;
       }
 
       .row
       	  {
+          /* Sets content to blank */
       	  content: "";
+          /* Displays table */
       	  display: table;
+          /* Clears both */
       	  clear: both;
       	  }
       	  .column_left{
+            /* Puts the column on the left side of the page */
       	  	float: left;
+            /* Sets it to 50% width of the page */
       	  	width: 50%;
+            /* Sets the padding around it to 20 px */
       	  	padding: 20px;
       	  }
       	  .column_right{
+            /* Puts the column on the right side of the page */
       	  	float: right;
+            /* sets the width of the column to 50% of the page */
       	  	width: 50%;
+            /* Sets the padding around the column to 20 px */
       	  	padding: 20px;
       	  }
           .table_contents{
+            /* Puts the column on the left side of the page */
       	  	float: left;
+            /* Makes the column the width of 30% of the page */
       	  	width: 30%;
+            /* Sets the padding around the column to 20px */
       	  	padding: 20px;
       	  }
           .main_page{
+            /* Puts the column on the right side of the page */
       	  	float: right;
+            /* Sets the width of the column to 70% of the page */
       	  	width: 70%;
+            /* Sets the padding around the column to 20px */
       	  	padding: 20px;
       	  }
 body {
+ /* There is no margin around the body */
   margin: 0;
+  /* Padding around the body is set to 0 /*
   padding: 0;
+  /* Color is set to tan */
   background: rgb(255, 233, 117);
+  /* Font is set to Ubuntu */
 	font-family: ubuntu;
 }
 
 header {
+  /* Will change the size of the header counting on the window size */
   display: flex;
+  /* Aligns items in the header to the center */
   align-items: center;
+  /* Changes color to turquoise blue */
   background: rgb(114, 243, 247);
 }
 
 header img {
+  /*Sets the width of image to 50px */
   width: 50px;
+  /*Changes background of image to white */
   background: white;
+  /* Sets the size of the white area on the image */
   border-radius: 5px;
-  margin: 0 20px 0 40px;
+/* Sets the how close a object can be next to the image */
+  margin: 0 40px 0 20px;
 }
 
 article{
+  /* Sets the color of the box to white */
   background: white;
+  /* Gray border on the outside of the box */
   border: 3px solid #a0a0a0;
+  /* Makes the box 90% of the width of the column */
   width: 90%;
+  /* Puts a 20px space on all sides */
   margin: 20px auto;
+  /* Rounds the corners */
   border-radius: 10px;
+  /* Space between the edge and the text */
   padding: 10px;
+  /* Makes the font ubuntu */
   font-family: ubuntu;
 }
-
+/* Runs a line under the title, and above the date */
 hr, article .date {
+  /* Makes color gray */
   color: #a0a0a0;
 }
 .vertical-menu {
+  /* makes the width 200px at first, if it does work it will auto size itself */
   width: 200px auto;
 }
 
 .vertical-menu a {
+  /* Makes the background gray */
   background-color: #eee;
+  /* Makes the color black */
   color: black;
+  /*Displays in blocks*/
   display: block;
+  /* Makes the text 12px from the edge of the block */
   padding: 12px;
+  /* No text decoration */
   text-decoration: none;
 }
 
 .vertical-menu a:hover {
+  /* Changes the background color to a gray color when you hover your mouse
+  over it */
   background-color: #ccc;
 }
 
-.vertical-menu a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 
 .menu_left{
+            /* Is a column that is on the right side of the page */
       	  	float: left;
+            /* Is 10% of the page width */
       	  	width: 10%;
+            /* the height is 1,000px */
       	  	height: 1000px;
+            /* Text is 20px from the side of the column */
       	  	padding: 20px;
       	  }
 .menu_right{
+            /* Column is on the right side of the page */
       	  	float: right;
+            /* The column is 80% of the page */
       	  	width: 80%;
+            /* Text is 20px from the edge of the column. */
       	  	padding: 20px;
       	  }
 
 div.scrollmenu {
+  /* Sets the background color to black */
   background-color: #333;
+  /* Allows you to scroll the menu bar when it is needed */
   overflow: auto;
+  /* Tells the browser to start a new line when it runs out of space */
   white-space: nowrap;
 }
 
 div.scrollmenu a {
+
   display: inline-block;
   color: white;
   text-align: center;
@@ -110,15 +161,23 @@ div.scrollmenu a {
 }
 
 div.scrollmenu a:hover {
+  /* A white color appers when the mouse hovers over the block */
   background-color: #777;
 }
 table
 {
+/* Makes the text normal and not bolded */
 font-weight: normal;
+/* Makes the font size 19px */
 font-size:19px;
 }
 .post{
+            /*Makes the font Georgia, if your computer does have that font, It
+            will use Palatino, and if your computer doesn't have Paltino it Will
+            use serif. */
             font-family: "Georgia", "Palatino", serif;
+            /* Puts a space of 1.8 between the lines of sentences. */
             line-height: 1.8;
+            /* Indents the text 50px */
             text-indent: 50px;
         }
