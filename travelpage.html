@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
+<!--Finished with comments-->
 <head>
 	<title>Travel Page</title>
+	<!--Adds image next to title of page in the tab part of the browser-->
 	<link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+	<!--Links style sheet-->
   <link href="style.css" rel="stylesheet" type="text/css" />
+	<!--scales the page to fit on the device-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Sets to english characters-->
 	<meta  charset="utf-8">
+	<!--The java script for the clock-->
 	<script>
-	function startTime() {
-	  var today = new Date();
-	  var h = today.getHours();
-	  var m = today.getMinutes();
-	  var s = today.getSeconds();
-	  m = checkTime(m);
-	  s = checkTime(s);
-	  document.getElementById('txt').innerHTML =
-	  h + ":" + m + ":" + s;
-	  var t = setTimeout(startTime, 500);
-	}
-	function checkTime(i) {
+	function startTime() { //named function startTime(). Also start of function.
+	  var today = new Date(); //Finds out day it is
+	  var h = today.getHours(); //Gets what hour we are in
+	  var m = today.getMinutes();//Gets what minute we are in, in the hour
+	  var s = today.getSeconds();//Gets what second we in, in the minute
+	  m = checkTime(m); //Refreshes the minute
+	  s = checkTime(s); // Refreshes the second
+	  document.getElementById('txt').innerHTML = //name to onboard to html
+	  h + ":" + m + ":" + s; //Puts in the order hour, minute, second
+	  var t = setTimeout(startTime, 500);//Displays new time every 500 milliseconds
+	}//End of function
+	function checkTime(i) { //name function checkTime
 	  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-	  return i;
-	}
+	  return i;//Keeps repeating this function until number is 10 or bigger
+	}//End of this function
 	</script>
 </head>
+<!--Onloads the script startTime()-->
 <body onload="startTime()">
+<!--Creates a header at the top-->
 <header>
+<!--Puts a image in the header-->
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Travel Page</h1>
     </header>
+	<!--Creates a scroll menu under the header to allow you to go to other pages-->
   <div class="scrollmenu">
   <a href="index.html">Home</a>
   <a href="travelpage.html">Travel Page</a>
@@ -37,13 +47,14 @@
   ...
 </div>
     <h2>Clock</h2>
+		<!--Shows the time-->
 		<div id="txt"></div>
 		<h2 align="middle"><strong>Fort Myers</strong></h2>
 	<p align="middle">
     <img src="https://i.ytimg.com/vi/m5QY65tYMBo/maxresdefault.jpg" alt="See the source image"/>
 		<br> A view of <strong>Fort Myers beach</strong>
 	</p>
-
+      <!--Creates a colum on the left side of the page-->
 			<div class="row">
 				<div class="column_left">
 					<h2> Stuff about Fort Myers</h2>
@@ -56,6 +67,7 @@
                     </p>
 
 				</div>
+				<!--Creates a colum on the right side of the page-->
 				<div class ="column_right">
 					<h2> Stuff about the Beach </h2>
 					<p>
@@ -81,6 +93,7 @@
 						</p>
 							<h2 align="middle">List of Nearby Towns</h2>
 							<h3 align="middle">Nearest to Farthest<h3>
+							<!--Creates an unordered list of the Nearby towns-->
 							<ul>
   							<li>Lehigh Acres</li>
   							<li>Estero</li>

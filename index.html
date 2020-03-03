@@ -1,35 +1,45 @@
 <!DOCTYPE HTML>
 <html>
+<!--finished comments-->
   <head>
     <title> Homepage! </title>
+    <!--Adds image next to title of page in the tab part of the browser-->
     <link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+    <!--Scales page to size of device-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Sets characters to the english characters-->
     <meta charset="utf-8">
+    <!--links style sheet-->
     <link href="style.css" rel="stylesheet" type="text/css" />
+<!--Java script for the clock-->
+</script>
 <script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
+function startTime() { //named function startTime(). Also start of function.
+  var today = new Date(); //Finds out day it is
+  var h = today.getHours(); //Gets what hour we are in
+  var m = today.getMinutes();//Gets what minute we are in, in the hour
+  var s = today.getSeconds();//Gets what second we in, in the minute
+  m = checkTime(m); //Refreshes the minute
+  s = checkTime(s); // Refreshes the second
+  document.getElementById('txt').innerHTML = //name to onboard to html
+  h + ":" + m + ":" + s; //Puts in the order hour, minute, second
+  var t = setTimeout(startTime, 500);//Displays new time every 500 milliseconds
+}//End of function
+function checkTime(i) { //name function checkTime
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+  return i;//Keeps repeating this function until number is 10 or bigger
+}//End of this function
 </script>
   </head>
+<!-- Onloads the script for the clock-->
   <body onload="startTime()">
+  <!--Creates header at the top of the page-->
   <header>
 </div>
    <img src="Images/rss-icon.png" width="50px" />
    <h1><strong><em>Welcome to my first website!!!!!!</em></strong></h1>
   </header>
+  <!--Creates scrollmenu at top of page to go to other webpages-->
   <div class="scrollmenu">
   <a href="index.html">Home</a>
   <a href="travelpage.html">Travel Page</a>
@@ -39,6 +49,7 @@ function checkTime(i) {
 </div>
 </div>
      <h2 align="middle"><strong><em>Clock</em></strong></h2>
+     <!--Adds clock and puts it in middle of page-->
      <div align="middle" id="txt"></div>
      <h2 align="middle"><strong><em>A little about me</em></strong></h2>
     <p align="middle">
@@ -57,7 +68,7 @@ function checkTime(i) {
     animal, they can consume up to 40 pounds of food a day. Plus, I think cows are cool because
     <br>
     in 1850 almost every family owned a cow.
-
+    <!--Moves picture of cow across screen-->
     <br><marquee behavior="alternate" direction="right" scrollamount="5"><img src="Images/th.jpeg">
     <br> A cow standing in a field.
     </marquee>

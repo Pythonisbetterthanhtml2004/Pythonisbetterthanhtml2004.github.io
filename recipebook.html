@@ -1,34 +1,40 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<!--Sets characters to the english characters-->
 <meta charset="utf-8">
 <title>Recipe Book</title>
+<!--Adds image next to title of page in the tab part of the browser-->
 <link rel="icon" href="Images/rss-icon.png" type="image/gif" sizes="16x16">
+<!--scales the page to fit on the device-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Links style sheet-->
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
+function startTime() { //named function startTime(). Also start of function.
+  var today = new Date(); //Finds out day it is
+  var h = today.getHours(); //Gets what hour we are in
+  var m = today.getMinutes();//Gets what minute we are in, in the hour
+  var s = today.getSeconds();//Gets what second we in, in the minute
+  m = checkTime(m); //Refreshes the minute
+  s = checkTime(s); // Refreshes the second
+  document.getElementById('txt').innerHTML = //name to onboard to html
+  h + ":" + m + ":" + s; //Puts in the order hour, minute, second
+  var t = setTimeout(startTime, 500);//Displays new time every 500 milliseconds
+}//End of function
+function checkTime(i) { //name function checkTime
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+  return i;//Keeps repeating this function until number is 10 or bigger
+}//End of this function
 </script>
 </head>
+<!--Onloads the script startTime()-->
 <body onload="startTime()">
 <header>
 <img src="Images/rss-icon.png" width="50px" />
 <h1>Recipe Book<h1>
 </header>
+<!--Creates scrollmenu at top of page to go to different webpages-->
 <div class="scrollmenu">
   <a href="index.html">Home</a>
   <a href="travelpage.html">Travel Page</a>
@@ -37,23 +43,33 @@ function checkTime(i) {
   ...
 </div>
 <div class="row">
+<!--Creates a column for the table of contents and clock-->
   <div class="table_contents">
     <h2>Clock</h2>
+    <!--adds the clock to the page-->
     <div id="txt"></div>
     <h2>Table of Contents</h2>
+     <!--Creates a unorderd list that takes you to the recipe-->
       <ul>
         <li><a href="#slow"> Slow-Roasted Pork Shoulder</a></li>
         <li><a href="#beef">The Ultimate Beef Wellington</a></li>
         <li><a href="#fbeef">Fabulous Beef Tenderloin</a></li>
       </ul>
 </div>
+   <!--Creates another column for the main page-->
     <div class="main_page">
+        <!--The id is for the table of contents to bring you to this part of
+        the page-->
         <h1 id="slow" align="middle">Slow-Roasted Pork Shoulder<h1>
         <p align="middle">
         <img src="Images/slowroastedporkshoulder.jpeg" alt="Slow-Roasted Pork Shoulder" width="700">
       </p>
+      <!--Creates a table that is the width of the page, with a border of 3
+      between the rows, and padding of 3 on the outside of the table-->
       <table style="width: 100%;" border="3" cellpadding="3">
+          <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                <strong>Ingredients</strong>
              </td>
@@ -62,8 +78,9 @@ function checkTime(i) {
                <strong>Quantity</strong>
              </td>
            </tr>
-
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                Black Peppercorns
              </td>
@@ -73,8 +90,9 @@ function checkTime(i) {
 
              </td>
            </tr>
-
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
               25 cloves of garlic
              </td>
@@ -84,7 +102,9 @@ function checkTime(i) {
                (peeled)
              </td>
            </tr>
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                Whole cloves
              </td>
@@ -93,8 +113,9 @@ function checkTime(i) {
                10 cloves
              </td>
            </tr>
-
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                Vegetable oil
              </td>
@@ -103,8 +124,9 @@ function checkTime(i) {
                3/4 cup
              </td>
            </tr>
-
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
               Bone-in pork shoulder
              </td>
@@ -114,8 +136,9 @@ function checkTime(i) {
                (about 7 pounds)
              </td>
            </tr>
-
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                Kosher salt
              </td>
@@ -124,7 +147,9 @@ function checkTime(i) {
                As needed
              </td>
            </tr>
+           <!--Creates table row-->
            <tr>
+             <!--The width of the column is 62%-->
              <td style="width: 62%;">
                White distilled vinegar
              </td>
@@ -134,12 +159,14 @@ function checkTime(i) {
              </td>
            </tr>
          </table>
+         <!--Changes the font size to 15px-->
          <p style="font-size:15px">
            Preptime: 15 minutes<br>
            Cooktime: 5 hr 30 min
          </p>
               </tbody>
           </thead>
+            <!--Changes the font size to 20px-->
             <p style="font-size:20px">
               <h2>Directions</h2>
               <ol>
@@ -175,12 +202,18 @@ function checkTime(i) {
             <p>
               <a href="https://www.foodnetwork.com/recipes/food-network-kitchen/slow-roasted-pork-shoulder-recipe-2011621" target="_blank">Source: Food Network</a>
             <p>
+            <!--The id is for the table of contents to bring you to this part of
+            the page-->
             <h1 id="beef" align="middle">The Ultimate Beef Wellington</h1>
             <p align="middle">
               <img src="Images/beefw.jpeg" alt="Beef Wellington" width="700">
             <p>
+              <!--Creates a table that is the width of the page, with a border of 3
+              between the rows, and padding of 3 on the outside of the table-->
               <table style="width: 100%;" border="3" cellpadding="3">
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                        <strong>Ingredients</strong>
                      </td>
@@ -189,8 +222,9 @@ function checkTime(i) {
                        <strong>Quantity</strong>
                      </td>
                    </tr>
-
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                      White button Mushrooms
                      </td>
@@ -201,8 +235,9 @@ function checkTime(i) {
 
                      </td>
                    </tr>
-
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                       Shallots <br>
                       (peeled and roughly chopped)
@@ -212,7 +247,9 @@ function checkTime(i) {
                        2 shallots
                      </td>
                    </tr>
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                      Cloves of garlic <br>
                      (peeled and roughly chopped)
@@ -222,8 +259,9 @@ function checkTime(i) {
                        4 cloves
                      </td>
                    </tr>
-
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                      Fresh thyme <br>
                      (leaves only)
@@ -233,8 +271,9 @@ function checkTime(i) {
                       2 springs
                      </td>
                    </tr>
-
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                       Unsalted butter
                      </td>
@@ -243,8 +282,9 @@ function checkTime(i) {
                       2 Tbsp
                      </td>
                    </tr>
-
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                        Extra-virgin olive oil
                      </td>
@@ -253,7 +293,9 @@ function checkTime(i) {
                       2 Tbsp
                      </td>
                    </tr>
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                       Kosher salt
                      </td>
@@ -262,7 +304,9 @@ function checkTime(i) {
                        As needed
                      </td>
                    </tr>
+                   <!--Creates table row-->
                    <tr>
+                     <!--The width of the column is 62%-->
                      <td style="width: 62%;">
                       Freshly ground black pepper
                      </td>
@@ -366,14 +410,19 @@ function checkTime(i) {
                  <p>
                    <a href="https://www.foodnetwork.com/recipes/tyler-florence/the-ultimate-beef-wellington-recipe2-1952280" target="_blank">Source: Food Network</a>
                  <p>
+                <!--The id is for the table of contents to bring you to this part of
+                the page-->
                  <h1 id="fbeef" align="middle">Fabulous beef tenderloin</h1>
                  <p align="middle">
                  <img src="Images/beeft.jpg" alt="Beef Wellington" width="700">
                  </p>
                       </tbody>
                   </thead>
+                  <!--Creates a table that is the width of the page, with a border of 3
+                  between the rows, and padding of 3 on the outside of the table-->
                   <table style="width: 100%;" border="3" cellpadding="3">
                        <tr>
+                         <!--The width of the column is 62%-->
                          <td style="width: 62%;">
                            <strong>Ingredients</strong>
                          </td>
@@ -384,6 +433,7 @@ function checkTime(i) {
                        </tr>
 
                        <tr>
+                         <!--The width of the column is 62%-->
                          <td style="width: 62%;">
                          Beef tenderloin roast
                          </td>
@@ -396,6 +446,7 @@ function checkTime(i) {
                        </tr>
 
                        <tr>
+                         <!--The width of the column is 62%-->
                          <td style="width: 62%;">
                           Soy sauce
                          </td>
@@ -405,6 +456,7 @@ function checkTime(i) {
                          </td>
                        </tr>
                        <tr>
+                         <!--The width of the column is 62%-->
                          <td style="width: 62%;">
                          Melted Butter
                          </td>
